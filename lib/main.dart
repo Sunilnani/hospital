@@ -46,12 +46,12 @@ class _MyAppState extends State<MyApp> {
                   SizedBox(height: 15,),
                   Container(
                     alignment: Alignment.centerLeft,
-                      child: Text("Hello Jane",style: TextStyle(color: Colors.black87,fontWeight: FontWeight.w700,fontSize: 17),)
+                      child: Text("Hello Jane",style: TextStyle(color: Colors.blueGrey,fontWeight: FontWeight.w700,fontSize: 17),)
                   ),
                   SizedBox(height: 12,),
                   Container(
                     alignment: Alignment.centerLeft,
-                    child: Text("Find Your Specialist",style: TextStyle(color: Colors.black87,fontSize: 28,fontWeight: FontWeight.w700),),
+                    child: Text("Find Your Specialist",style: TextStyle(color: Colors.blueGrey,fontSize: 28,fontWeight: FontWeight.w700),),
                   ),
                   SizedBox(height: 15,),
                   Stack(
@@ -107,11 +107,12 @@ class _MyAppState extends State<MyApp> {
                   },
                 ),
               ),
+                  SizedBox(height: 5,),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Container(
-                        child: Text("Top Doctor",style: TextStyle(color: Colors.black87,fontWeight: FontWeight.w700,fontSize: 22),),
+                        child: Text("Top Doctor",style: TextStyle(color: Colors.blueGrey,fontWeight: FontWeight.w700,fontSize: 22),),
                       ),
                       Container(
                         child: Text("See all",style: TextStyle(color: Colors.greenAccent,fontWeight: FontWeight.w500),),
@@ -190,7 +191,7 @@ class DoctorsAppointment extends StatelessWidget {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text(title,style: TextStyle(color: Colors.black87,fontWeight: FontWeight.w500,fontSize: 15),),
+                      Text(title,style: TextStyle(color: Colors.blueGrey,fontWeight: FontWeight.w500,fontSize: 15),),
                       SizedBox(height: 5,),
                       Text(subtitle,style: TextStyle(color: Colors.black12,fontSize: 12,fontWeight: FontWeight.w500),),
                       SizedBox(height: 5,),
@@ -214,7 +215,18 @@ class DoctorsAppointment extends StatelessWidget {
                               width: 100,
                               decoration: BoxDecoration(
                                   color: Colors.greenAccent,
-                                  borderRadius: BorderRadius.circular(15)
+                                  borderRadius: BorderRadius.circular(15),
+                                boxShadow: [
+                                  BoxShadow(
+                                    color: Colors.greenAccent[200],
+                                    offset: const Offset(
+                                      2.0,
+                                      2.0,
+                                    ),
+                                    blurRadius: 1.0,
+                                    spreadRadius: 2.0,
+                                  ),
+                                ],
                               ),
                               child: Text("Appointment",style: TextStyle(color: Colors.white),),
                             )
@@ -255,7 +267,18 @@ class Humanparts extends StatelessWidget {
               margin: EdgeInsets.symmetric(horizontal: 4.0),
               decoration: BoxDecoration(
                   color:this.colors,
-                  borderRadius: BorderRadius.circular(10)
+                  borderRadius: BorderRadius.circular(10),
+                boxShadow: [
+                  BoxShadow(
+                    color: this.colors,
+                    offset: const Offset(
+                      5.0,
+                      5.0,
+                    ),
+                    blurRadius: 5.0,
+                    spreadRadius: 2.0,
+                  ),
+                ],
               ),
               child:Column(
                 children: [
